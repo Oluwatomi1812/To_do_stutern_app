@@ -5,11 +5,10 @@ import UserController from '../controller/user.controller.js'
 const router = new express.Router()
 
 // User Creation Route
-router.post("/create", UserController.createUser)
-
+router.post("/create", UserController.createUser)//the class dot the function
 
 //Exporting the User Router
-export { router }
+export { router }//like module.exports
 
 // export const obj = { name: "james" }
 

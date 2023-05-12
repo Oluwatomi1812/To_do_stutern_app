@@ -37,7 +37,8 @@ app.use((err, req, res, next)=>{
     message: err.message,
     status: "Failed",
   })
-})
+})//This states that use this when there is an err, pass it to the function, the function states that you should
+//send the status to the response, then send json that it failed.
 
 // Setting up the express server
 app.listen(port, ()=>{

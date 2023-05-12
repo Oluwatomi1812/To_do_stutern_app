@@ -4,7 +4,7 @@ import Task from "../model/task.model.js"
 export default class TaskController {
   static async createTask(req, res, next){
     try{
-      const {error, value} = await createTaskValidator.validate(req.body)
+      const {error, value} = await createTaskValidator.validate(req.body)//validate it
       if(error){
         console.log(error.details)
         const err = new Error(error.details[0].message)

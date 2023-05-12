@@ -27,10 +27,10 @@ const TaskSchema = new Schema({
   timestamps: true
 })
 
-TaskSchema.pre(/^find/, (next)=>{
+TaskSchema.pre(/^find/, function (next){
   if (this instanceof Query) {
     this.where({ isDeleted: { $ne: true } }); 
   }
-})
-
+})//before any find operation is run, all document that are deleted should be excluded
+// $ne - not equal
 export default model('Task', TaskSchema)
